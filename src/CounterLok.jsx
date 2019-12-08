@@ -3,7 +3,6 @@ import s from './Counter.module.css';
 import { string } from 'postcss-selector-parser';
 
 
-
 class CounterLok extends React.Component {
     constructor() {
         super();
@@ -11,6 +10,7 @@ class CounterLok extends React.Component {
             counter: 0,
         }
     }
+    maxFilterValue = 'Active'
 
     onClickAdd = (props) => {
         this.setState((upReset) => {
@@ -18,18 +18,26 @@ class CounterLok extends React.Component {
             return {
                 counter: upReset.counter + 1,
             }}
+             else if (upReset.counter === 5) {
+                console.log('max');
+            }
         })
     };
+    // maxFilter = (newValue) => {
+    //     this.setState({
+    //         maxFilterValue: newValue
+    //     });
+    // }
 
     onClickReset = () => {
         this.setState((upReset) => {
             return {
-                counter: upReset.counter === 0,
+                counter: 0,
             }            
         })
     };
 
-    render() {
+    render(props) {
         return (
             <div className={s.div}>
                 <h1 className={s.counter}>{this.state.counter}</h1>

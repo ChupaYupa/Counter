@@ -1,4 +1,5 @@
 .div {
+    width: 700px;
     height: 200px;
     background-color: rgb(116, 197, 252);
     display: flex;
@@ -6,12 +7,13 @@
     align-items: center;
     border: 1px solid;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 .counter {
-    width: 2%;
     color: #fdfdfd;
     background-color: rgb(245, 10, 10);
     justify-content: center;
+    text-align: center;
     border: 1px white solid;
 }
 .onClickAdd {
@@ -27,4 +29,7 @@
     background-color: black;
     justify-content: center;
     border: 1px white solid;
+}
+.Active {
+    color: red;
 }
