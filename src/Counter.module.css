@@ -30,6 +30,6 @@
     justify-content: center;
     border: 1px white solid;
 }
-.Active {
-    color: red;
+.error {
+    color: green;
 }

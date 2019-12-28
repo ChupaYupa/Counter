@@ -1,25 +1,29 @@
 import React from 'react';
 import s from './Counter.module.css';
 import { string } from 'postcss-selector-parser';
+import OnStyle from './Buttons';
+import Buttons from './Buttons';
 
 
 class CounterLok extends React.Component {
     constructor() {
         super();
-        this.state = {
-            counter: 0,
-        }
     }
-    maxFilterValue = 'Active'
+    state = {
+        counter: 0,
+        maxCounter: 5,
+        // maxFilterValue: 'Active'
+    }
+
+
 
     onClickAdd = (props) => {
+
         this.setState((upReset) => {
             if (upReset.counter < 5) {
-            return {
-                counter: upReset.counter + 1,
-            }}
-             else if (upReset.counter === 5) {
-                console.log('max');
+                return {
+                    counter: upReset.counter + 1,
+                }
             }
         })
     };
@@ -33,16 +37,21 @@ class CounterLok extends React.Component {
         this.setState((upReset) => {
             return {
                 counter: 0,
-            }            
+            }
         })
     };
+    // changeFilter = (newFilterValue) => {
+    //     this.setState({
+    //         maxFilterValue: newFilterValue
+    //     });
+    // }
 
     render(props) {
+        // let isError = this.state.counter === this.state.maxCounter
+        // let classNameCounter = isError ? `${s.counter} ${s.error}` : `${s.counter}`
         return (
-            <div className={s.div}>
-                <h1 className={s.counter}>{this.state.counter}</h1>
-                <button className= {s.onClickAdd} onClick={this.onClickAdd}>Add</button>
-                <button  className= {s.onClickReset}onClick={this.onClickReset}>Reset</button>
+            <div>
+                <Buttons addedMethod={this.onClickAdd} resetedMethod={this.onClickReset} counter={this.state.counter} maxCounter={this.state.maxCounter} />
             </div>
         )
     }
