@@ -1,0 +1,33 @@
+
+.counter {
+    color: rgb(7, 250, 238);
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    text-align: center;
+    border: 1px white solid;
+}
+.onClickAdd {
+    display: flex;
+    color: rgb(7, 250, 238);
+    justify-content: center;
+    border: 1px white solid;
+    background-color: rgb(0, 0, 0);
+}
+.onClickReset {
+    display: flex;
+    color: rgb(7, 250, 238);
+    justify-content: center;
+    border: 1px white solid;
+    background-color: rgb(0, 0, 0);
+}
+.error {
+    color: red;
+}
+.but {
+   display: flex; 
+}
+.disabled {
+    color: rgb(7, 250, 238);;
+    opacity: 0.5;
+
+}

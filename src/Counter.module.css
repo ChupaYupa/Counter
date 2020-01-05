@@ -1,5 +1,12 @@
+.divStore {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
 .div {
-    width: 700px;
+        width: 500px;
     height: 200px;
     background-color: rgb(116, 197, 252);
     display: flex;
@@ -8,8 +15,26 @@
     border: 1px solid;
     flex-direction: column;
     flex-wrap: wrap;
+    float: right;
+    margin-top: 100px;
+    border: 7px rgb(0, 0, 0) double;
 }
-.counter {
+.div2 {
+        width: 500px;
+    height: 200px;
+    background-color: rgb(116, 197, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    float: right;
+    margin-top: 100px;
+    border: 7px rgb(0, 0, 0) double;
+}
+
+/* .counter {
     color: #fdfdfd;
     background-color: rgb(245, 10, 10);
     justify-content: center;
@@ -32,4 +57,4 @@
 }
 .error {
     color: green;
-}
+} */ 

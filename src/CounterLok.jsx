@@ -11,7 +11,8 @@ class CounterLok extends React.Component {
     }
     state = {
         counter: 0,
-        maxCounter: 5,
+        minCounter: 0,
+        maxCounter: 9,
         // maxFilterValue: 'Active'
     }
 
@@ -20,7 +21,7 @@ class CounterLok extends React.Component {
     onClickAdd = (props) => {
 
         this.setState((upReset) => {
-            if (upReset.counter < 5) {
+            if (upReset.counter < this.state.maxCounter) {
                 return {
                     counter: upReset.counter + 1,
                 }
@@ -36,14 +37,12 @@ class CounterLok extends React.Component {
     onClickReset = () => {
         this.setState((upReset) => {
             return {
-                counter: 0,
+                counter: this.state.minCounter,
             }
         })
     };
-    // changeFilter = (newFilterValue) => {
-    //     this.setState({
-    //         maxFilterValue: newFilterValue
-    //     });
+    // startValue = () => {
+    //     this.setState
     // }
 
     render(props) {
@@ -51,7 +50,7 @@ class CounterLok extends React.Component {
         // let classNameCounter = isError ? `${s.counter} ${s.error}` : `${s.counter}`
         return (
             <div>
-                <Buttons addedMethod={this.onClickAdd} resetedMethod={this.onClickReset} counter={this.state.counter} maxCounter={this.state.maxCounter} />
+                <Buttons addedMethod={this.onClickAdd} resetedMethod={this.onClickReset} counter={this.state.counter} maxCounter={this.state.maxCounter} minCounter={this.state.minCounter} />
             </div>
         )
     }
