@@ -14,6 +14,15 @@
     border: 7px rgb(0, 0, 0) double;
    
 }
+.input {
+    margin: 5px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 100px;
+}
 .set {
     display: flex;
     color: rgb(7, 250, 238);
@@ -25,6 +34,9 @@
     width: 70px;
 
 }
+.inputError {
+    background-color: crimson;
+}
 .value {
     display: flex;
     color: rgb(7, 250, 238);
@@ -34,4 +46,9 @@
     flex-direction: column-reverse;
     width: 300px;
     height: 100px;
+}
+.disabled {
+    color: rgb(7, 250, 238);;
+    opacity: 0.5;
+
 }

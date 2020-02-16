@@ -1,0 +1,55 @@
+
+.counter {
+   display: flex;
+    color: rgb(7, 250, 238);
+    justify-content: center;
+    border: 1px white solid;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column-reverse;
+    width: 300px;
+    height: 100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.onClickAdd {
+   display: flex;
+    color: rgb(7, 250, 238);
+    justify-content: center;
+    border: 1px white solid;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    height: 30px;
+    width: 70px;
+}
+.onClickReset {
+    display: flex;
+    color: rgb(7, 250, 238);
+    justify-content: center;
+    border: 1px white solid;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    height: 30px;
+    width: 70px;
+}
+.error {
+    color: red;
+}
+.but {
+   display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    border: 7px rgb(0, 0, 0) double;
+}
+.disabled {
+    color: rgb(7, 250, 238);;
+    opacity: 0.5;
+
+}

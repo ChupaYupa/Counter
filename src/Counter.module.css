@@ -1,13 +1,10 @@
 .divStore {
     display: flex;
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
-.div {
-        width: 500px;
-    height: 200px;
+.div { 
     background-color: rgb(116, 197, 252);
     display: flex;
     justify-content: center;
@@ -19,21 +16,32 @@
     margin-top: 100px;
     border: 7px rgb(0, 0, 0) double;
 }
-.div2 {
-        width: 500px;
-    height: 200px;
-    background-color: rgb(116, 197, 252);
+.but {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: 1px solid;
-    flex-direction: column;
-    flex-wrap: wrap;
-    float: right;
-    margin-top: 100px;
-    border: 7px rgb(0, 0, 0) double;
 }
-
+.but button{
+    display: flex;
+    color: rgb(7, 250, 238);
+    justify-content: center;
+    border: 1px white solid;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    height: 30px;
+    width: 70px;
+}
+ button:disabled {
+     background: #ff00006b;
+ }
+ button:error {
+     background-color: chartreuse;
+ }
+.elements {
+    display: flex;
+}
+.inputError {
+    background: crimson;
+}
 /* .counter {
     color: #fdfdfd;
     background-color: rgb(245, 10, 10);

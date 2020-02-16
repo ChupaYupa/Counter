@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import CounterLok from './CounterLok';
-import CounterSetting from './CounterSetting';
+import CounterLocal from './CounterLocal';
 import s from './Counter.module.css';
-import state from './state';
+import { store } from './Redux/counter-reduce';
+import { Provider } from 'react-redux';
 
-
-function App() {
+function App(props) {
   return (
-    <div className={s.divStore}>
-      <div className={s.div}><CounterLok state={state} /></div>
-      <div className={s.div2}><CounterSetting /></div>
-    </div>
+    <Provider store={store}>
+      <div className={s.divStore}>
+        <div className={s.div}><CounterLocal />
+        </div>
+      </div>
+    </Provider>
+
   );
 }
 
